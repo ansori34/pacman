@@ -1,0 +1,17 @@
+Attribute : 
+
+Pacman
+a. Koordinat
+b. Status
+
+Monster
+a. Jumlah
+b. Koordinat
+
+Makanan
+a. Koordinat
+b. Jumlah
+
+Makanan Spesial
+a. Koordinat
+b. Jumlah
