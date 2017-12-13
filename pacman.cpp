@@ -3,7 +3,7 @@
 using namespace std;
 
 int width = 30, height = -20;
-bool status = false;
+bool status = true;
 
 // Pacman Coordinates
 int pacman[2] = {
@@ -26,7 +26,7 @@ void createMap(bool active)
   for (int i = 0; i < -height; i++) {
     for (int j = 0; j < width; j++) {
       if (j == pacman[0] && i == -pacman[1]) {
-        cout << ":V";
+        cout << "V ";
       } else {
         if (j > 0 && j < width - 1 && i > 0 && i < -height - 1) {
           if (active) {
@@ -55,19 +55,19 @@ void control()
     cin >> control;
 
     if (control == 'a') {
-      if (pacman[0] > 0 && pacman[0] <= width) {
+      if (pacman[0] > 1 && pacman[0] <= width) {
         pacman[0]--;
       }
     } else if (control == 'd') {
-      if (pacman[0] >= 0 && pacman[0] < width) {
+      if (pacman[0] >= 0 && pacman[0] < width - 2) {
         pacman[0]++;
       }
     } else if (control == 'w') {
-      if (pacman[1] < 0 && pacman[1] >= height) {
+      if (pacman[1] < -1 && pacman[1] >= height) {
         pacman[1]++;
       }
     } else if (control == 's') {
-      if (pacman[1] <= 0 && pacman[1] > height) {
+      if (pacman[1] <= 0 && pacman[1] > height + 2) {
         pacman[1]--;
       }
     }
